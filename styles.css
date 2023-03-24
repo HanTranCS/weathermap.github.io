@@ -9,16 +9,26 @@ html {
 }
 
 body {
-  width: 130rem;
   font-family: "Rubik", sans-serif;
   color: #f2e9e4;
   line-height: 1;
   font-weight: 500;
   background-color: #22223b;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  margin: 2rem 6rem;
+}
+
+main {
+  width: 130rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
   gap: 2rem;
+}
+
+.main {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
 }
 
 .main-header {
@@ -76,14 +86,14 @@ body {
   background-color: #edede9;
   color: #555;
 }
+
 /*----------------------------------------------------------------*/
 /*-----------------------LEFT SECTION-----------------------------*/
 /*----------------------------------------------------------------*/
 
 .left-main {
-  width: 100%;
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto;
   gap: 2rem;
   transition: all 1s ease-in-out;
 }
@@ -91,22 +101,16 @@ body {
 .search-form {
   width: 60%;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
   border-radius: 10px;
   background-color: #5c6078;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 6rem;
   transition: all 1s;
 }
 
 .hidden .search-form {
-  transform: translate(-50%, -50%);
-  top: 30rem;
-  left: 50%;
+  transition: all 1s;
 }
 
 .light .search-form {
@@ -136,6 +140,7 @@ body {
   color: #f2e9e4;
   font-family: "Rubik", sans-serif;
   font-size: 1.6rem;
+  align-self: center;
 }
 
 .light .search-form input::placeholder {
@@ -342,7 +347,7 @@ body {
   background-color: #9a8c98;
   border-radius: 10px;
   padding: 2.8rem 3rem;
-  height: calc(100% - 10rem);
+  height: 100%;
 }
 
 .light .right-main {
@@ -367,7 +372,7 @@ body {
 }
 
 .forecast-day:not(:last-child) {
-  border-bottom: 1px solid #4a4e69;
+  border-bottom: 1px solid #888;
 }
 
 .forecast-day span {
